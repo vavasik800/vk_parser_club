@@ -21,6 +21,7 @@ def main():
         print(comment['text'])
         print(comment['keyword'])
         print('___________________________________________')
+    print()
     return
 
 
