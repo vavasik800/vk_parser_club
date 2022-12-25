@@ -15,7 +15,7 @@ def main():
     vk_comment = VkParsingComment(login=login, password=password)
     d = vk_comment.get_comments_group(group, limit_posts=50, subcoment=True)
     result = vk_comment.find_bad_comment(d, list_keywords)
-    # result = vk_comment.find_comment_id(d, id_user)
+    list_comment = vk_comment.find_comment_id(d, id_user)
     for comment in result:
         print(comment['url'])
         print(comment['text'])
