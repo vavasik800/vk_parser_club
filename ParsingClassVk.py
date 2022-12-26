@@ -336,7 +336,7 @@ class VkParsingComment(VkParserModel):
                                   count=100)
             all_comments += d
             if subcoment:
-                comment_with_subcoment = list(filter(lambda x: x['thread']['count'] != 0, d))
+                comment_with_subcoment = tuple(filter(lambda x: x['thread']['count'] != 0, d))
                 for comment in comment_with_subcoment:
                     id_comment = comment['id']
                     all_comments_ = self._execute_all(type_query='wall.getComments', count_elements=count_comments,
